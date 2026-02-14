@@ -147,13 +147,13 @@ This project is meant to be explored, improved, and learned from.
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/universe.git
+git clone https://github.com/unnkarm/UniVerseX.git
 ```
 
 Navigate into the project:
 
 ```bash
-cd universe
+cd UniVerseX
 ```
 
 Install dependencies (frontend example):
