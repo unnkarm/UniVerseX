@@ -8,10 +8,12 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
+ "dependencies": {
+"react": "^18.2.0",
+"react-dom": "^18.2.0",
+"@splinetool/react-spline": "^4.0.0",
+"@splinetool/runtime": "^1.0.0"
+},
   "devDependencies": {
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",

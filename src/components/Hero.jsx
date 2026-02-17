@@ -1,6 +1,12 @@
+import Spline from '@splinetool/react-spline';
+
 export default function Hero() {
   return (
     <section id="hero">
+      <div className="hero-spline">
+        <Spline scene="/scene.splinecode" />
+      </div>
+
       <div className="hero-grid-bg" />
       <div className="hero-orb orb-1" />
       <div className="hero-orb orb-2" />

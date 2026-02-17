@@ -71,23 +71,30 @@ body {
 /* ─── NAV ─── */
 nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 1200px;
   z-index: 100;
-  padding: 24px 60px;
+  padding: 16px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.3s ease, background 0.3s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 100px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 nav.scrolled {
-  background: rgba(10, 10, 11, 0.85);
-  border-color: var(--line);
+  background: rgba(10, 10, 11, 0.6);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  padding: 12px 32px; /* Slight shrink on scroll */
 }
 
 .nav-logo {
@@ -151,6 +158,29 @@ nav.scrolled {
   padding: 160px 60px 100px;
   position: relative;
   overflow: hidden;
+}
+
+.hero-spline {
+  position: absolute;
+  inset: 0;
+  z-index: 1; /* Low z-index but above zero if needed, check other elements */
+}
+
+/* Ensure content sits above spline but allows mouse events to pass through */
+.hero-eyebrow,
+.hero-headline,
+.hero-sub,
+.hero-ctas {
+  position: relative;
+  z-index: 10;
+  pointer-events: none; /* Let mouse events pass through to Spline */
+}
+
+/* Re-enable pointer events for interactive elements */
+.hero-ctas a,
+.btn-primary,
+.btn-ghost {
+  pointer-events: auto;
 }
 
 .hero-grid-bg {
